@@ -37,8 +37,20 @@ let six = document.querySelector(".six");
 let seven = document.querySelector(".seven");
 // 
 
+let menu = document.querySelector(".menu");
+let result = document.querySelector(".rules");
+let startGame = false;
+
 //COLORS
 let red = "#957DAD";
+
+function visableRules(){
+    result.style.visibility="visible";
+}
+function hiddenRules(){
+    result.style.visibility="hidden";
+}
+
 
 
 if (points == 2){
@@ -47,19 +59,29 @@ if (points == 2){
 }
 
 
+
 const gameState = {
     
     
-    clock: 1,
+    clock: 31,
     points:0,
     win:0,
 
 
+    resetClock(){
+        this.clock = 31;
+    },
+
     tick(){
-        this.clock++;
+        this.clock--;
         time.innerHTML = this.clock;
-        
-        
+
+
+
+        if(this.clock == 0){
+            this.clock = 31;
+        }
+
 
         if(this.clock > 10){
 
@@ -125,5 +147,10 @@ const gameState = {
 
 function add(){
     gameState.addPoint();
+}
+
+function hiddenMenu(){
+    menu.style.visibility="hidden";
+    gameState.resetClock();
 }
 

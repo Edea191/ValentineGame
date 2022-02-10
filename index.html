@@ -13,17 +13,37 @@
     <title>Valentine Card</title>
 </head>
 <body>
-    
+
+
 
     <div class="container">
+
         <div class="game_stats">
             <div class="ptk">0</div>
             <div class="time">0 s</div>
         </div>
 
+
+
         <section class="main">
     
-    
+            <div class="menu">
+                <h1>Valentine Game</h1>
+                <ul>
+                    <li onclick="hiddenMenu()">Rozpocznij</li>
+                    <li onclick="visableRules()">Zasady Gry</li>
+                </ul>
+
+                <div class="rules">
+                    <ul>
+                        <ol><i class="fas fa-star"></i>Gra trwa 30sekund</ol>
+                        <ol><i class="fas fa-star"></i>Zdobądź jak najwięcej punktów</ol>
+                        <ol><i class="fas fa-star"></i>Im więcej tym lepiej</ol>
+                    </ul>
+                    <button onclick="hiddenRules()">Powrót</button>
+
+                </div>
+            </div>
     <span class="fas fa-heart-broken heart"></span>
     
         <span class="fas fa-grin-hearts heart"></span>

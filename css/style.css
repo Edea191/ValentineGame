@@ -1,7 +1,10 @@
 :root{
     --body-background: #FFDFD3;
     --main-background: #D291BC;
-}
+    --box-shadow: 5px 5px 10px #a86f95;
+    --points-backgroud: #f7bea9;
+    --points-shadow: 5px 5px 10px #c48c77;
+}   
 
 *{
     box-sizing: border-box;
@@ -14,13 +17,16 @@ h1{
 }
 
 body{
+    background-image: url(./images/abstract.jpg);
     background-color: var(--body-background);
     font-weight: 900;
     margin: 0;
     padding: 0;
 }
 /* CONTAINER */
-
+.game_stats, .main, .points{
+    opacity:  0.91;
+}
 
 
 /* GAME STATS */
@@ -35,17 +41,19 @@ body{
     display: flex;
     gap: 1%;
     justify-content: space-between;
+    box-shadow: var(--box-shadow);
 
 }
 
 .ptk, .time{
     margin: 5%;
     flex-basis: 40%;
-    background-color: var(--body-background);
+    background-color: var(--points-backgroud);
     border-radius: 15px;
     text-align: center;
     align-self: center;
     font-size: 40px;
+    box-shadow: var(--points-shadow);
 }
 
 /* MAIN */
@@ -56,7 +64,7 @@ body{
     align-content: center;
    
     
-
+    box-shadow: var(--box-shadow);
     margin: 0 auto;
     background-color: var(--main-background);
     height: 400px;
@@ -95,6 +103,7 @@ body{
     margin-bottom: 2%;
     margin-top: 2%;
     background-color: var(--main-background);
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     display: flex;
     gap: 1%;
@@ -104,9 +113,89 @@ body{
 
 .point{
     background-color: var(--main-background);
+    
     flex-basis: 10%;
     margin: 2%;
     border-radius: 10px;
     
 
+}
+
+/* Menu */
+
+.menu{
+    
+    position: absolute;
+    width: 500px;
+    height: 380px;
+    margin: 0 auto;
+    background-color: royalblue;
+    opacity: 0.95;
+    flex-flow: row wrap;
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    visibility: visible;
+}
+
+.menu h1{
+    flex-basis: 100%;
+    align-self: center;
+    text-align: center;
+}
+
+.menu ul li{
+    list-style-type: none;
+    margin-top: 5%;
+    width: 300px;
+    height: 50px;
+    background-color: var(--points-backgroud);
+    text-align: center;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    
+}
+
+.menu ul li:hover{
+    background-color: var(--body-background);
+
+}
+
+/* Rules */
+
+.rules{
+    margin: 2%;
+    position: absolute;
+    width: 80%;
+    height: 90%;
+    
+    background-color: aqua;
+    border-radius: 2px;
+    
+
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    visibility: hidden;
+
+}
+
+.rules button{
+    background-color: #f7bea9;
+    border: 1px solid #f7bea9;
+    margin-bottom: 10%;
+    align-self: flex-end;
+    
+}
+
+.rules ol{
+    margin-bottom: 10%;
+}
+.rules [class*="fa-"]{
+    font-size: 100%;
+    margin-right: 2%;
 }

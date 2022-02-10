@@ -1,0 +1,85 @@
+:root{
+    --body-background: #cdcccf;
+    --main-background: #a4c9ce;
+    --box-shadow: 5px 5px 10px #a399a0;
+    --points-backgroud: #f7bea9;
+    --points-shadow: 5px 5px 10px #c48c77;
+}   
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+  
+    background-color: var(--body-background);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+
+/* MAIN */
+.main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;   
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+    margin-top: 5%;
+    background-color: var(--main-background);
+    height: 600px;
+    width: 500px;
+    border-radius: 5px;
+    
+
+}
+
+
+.cirle {
+    margin: 0 auto;
+    width: 600px;
+    height: 200px;
+    border-radius: 2%;
+    left:10px;
+    top:200px;
+    background-color: red;
+    position: absolute;
+    animation-name: example;
+    animation-duration: 2s;
+    opacity: 0.75;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    visibility: visible;
+
+  }
+  
+  .cirle:hover{
+      font-size: 300%;
+      transition: 0.2s;
+  }
+  
+  /* @keyframes example {
+    0%   {background-color:red; left:600px; top:100px;}
+ 
+    100% {background-color:red; left:600px; top:300px;}
+  } */
+
+  .play-button{
+      position: relative;
+      font-size: 310%;
+      margin-bottom: 30px;
+  }
+
+  .button{
+      width: 50px;
+      height: 30px;
+      
+  }
+
+  .button:hover{
+    background-color: black;
+    
+    
+}
