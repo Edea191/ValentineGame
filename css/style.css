@@ -1,0 +1,104 @@
+:root{
+    --body-background: #FFDFD3;
+    --main-background: #D291BC;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+h1{
+    font-family: 'Love Ya Like A Sister'; 
+    font-weight: bold;
+    font-size: 40px;
+}
+
+body{
+    background-color: var(--body-background);
+    font-weight: 900;
+    margin: 0;
+    padding: 0;
+}
+/* CONTAINER */
+
+
+
+/* GAME STATS */
+.game_stats{
+    margin: 0 auto;
+    height: 100px;
+    width: 400px;
+    margin-bottom: 2%;
+    margin-top: 5%;
+    background-color: var(--main-background);
+    border-radius: 5px;
+    display: flex;
+    gap: 1%;
+    justify-content: space-between;
+
+}
+
+.ptk, .time{
+    margin: 5%;
+    flex-basis: 40%;
+    background-color: var(--body-background);
+    border-radius: 15px;
+    text-align: center;
+    align-self: center;
+    font-size: 40px;
+}
+
+/* MAIN */
+.main{
+    margin: 0 auto;
+    background-color: var(--main-background);
+    height: 400px;
+    width: 400px;
+    border-radius: 5px;
+
+}
+
+
+.main [class*="fa-"]{
+  
+    font-size: 600%;
+    font-weight: 900px;
+
+}
+
+.heart{
+    color: red;
+    font-size: 600%;
+    transition: 1s;
+}
+
+.heart:hover{
+    font-size: 800%;
+    transition: 1s;
+}
+
+
+/* Points */
+
+.points{
+    margin: 0 auto;
+    height: 70px;
+    width: 400px;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    background-color: var(--main-background);
+    border-radius: 5px;
+    display: flex;
+    gap: 1%;
+    justify-content: space-between;
+
+}
+
+.point{
+    background-color: var(--main-background);
+    flex-basis: 10%;
+    margin: 2%;
+    border-radius: 10px;
+    
+
+}
