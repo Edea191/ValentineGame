@@ -50,30 +50,38 @@ body{
 
 /* MAIN */
 .main{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+   
+    
+
     margin: 0 auto;
     background-color: var(--main-background);
     height: 400px;
     width: 400px;
     border-radius: 5px;
+    
 
 }
 
 
 .main [class*="fa-"]{
   
-    font-size: 600%;
+    font-size: 1200%;
     font-weight: 900px;
 
 }
 
 .heart{
     color: red;
-    font-size: 600%;
+    font-size: 1400%;
     transition: 1s;
 }
 
 .heart:hover{
-    font-size: 800%;
+    font-size: 1000%;
     transition: 1s;
 }
 

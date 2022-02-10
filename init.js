@@ -52,11 +52,38 @@ const gameState = {
     
     clock: 1,
     points:0,
+    win:0,
 
 
     tick(){
         this.clock++;
         time.innerHTML = this.clock;
+        
+        
+
+        if(this.clock > 10){
+
+            if (this.points > 6 && this.points < 10){
+            window.location.href="sample.html";
+            }
+
+            else if (this.points > 11 && this.points < 25){
+                window.location.href="sample.html";
+                }
+
+            else if (this.points > 25 && this.points < 35){
+                window.location.href="sample.html";
+                }
+
+            else if (this.points > 35 && this.points < 45){
+                window.location.href="sample.html";
+                    }
+    
+            else if (this.points > 45 && this.points < 55){
+                window.location.href="sample.html";
+                    }
+        
+    }
         
     },
 
@@ -70,6 +97,7 @@ const gameState = {
     checkpoint(ptk){
         if (ptk == 5){
             one.style.backgroundColor=red;
+            
         }
         else if(ptk == 15){
             two.style.backgroundColor=red;
