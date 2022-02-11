@@ -56,7 +56,7 @@ let activeStar ="rgb(255, 187, 0)";
 let InAtiveStar ="rgb(238, 222, 177)";
 
                     // Winner Point Setting //
-const topWinner = [55];
+const topWinner = [60];
 const secondPlace = [50, 59];
 const thirdPlace = [45, 40];            // [x, y] -  x: min. points  y:max points 
 const fourthPlace = [30, 30];
