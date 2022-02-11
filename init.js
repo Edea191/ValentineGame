@@ -38,13 +38,15 @@ let time = document.querySelector(".time");
 let points = document.querySelector(".ptk");
 
 // POINTS
-let one = document.querySelector(".one");
-let two = document.querySelector(".two");
-let three = document.querySelector(".three");
-let four = document.querySelector(".four");
-let five = document.querySelector(".five");
-let six = document.querySelector(".six");
-let seven = document.querySelector(".seven");
+let one = document.querySelector(".point_one");
+let two = document.querySelector(".point_two");
+let three = document.querySelector(".point_three");
+let four = document.querySelector(".point_four");
+let five = document.querySelector(".point_five");
+
+
+let activeStar ="rgb(255, 187, 0)";
+let InAtiveStar ="rgb(238, 222, 177)";
 // 
 
 let menu = document.querySelector(".menu");
@@ -99,34 +101,34 @@ const gameState = {
 
 
 
+
         if(this.clock == 0){
-            this.clock = 31;
-        }
 
+            if (this.points > 45 && this.points < 55){
+            window.location.href="finalWin.html";
+            }
 
-    //     if(this.clock > 10){
+            else if (this.points > 35 && this.points < 45){
+                window.location.href="fourWin.html";
+                }
 
-    //         if (this.points > 6 && this.points < 10){
-    //         window.location.href="sample.html";
-    //         }
+            else if (this.points > 25 && this.points < 35){
+                window.location.href="thirdWin.html";
+                }
 
-    //         else if (this.points > 11 && this.points < 25){
-    //             window.location.href="sample.html";
-    //             }
-
-    //         else if (this.points > 25 && this.points < 35){
-    //             window.location.href="sample.html";
-    //             }
-
-    //         else if (this.points > 35 && this.points < 45){
-    //             window.location.href="sample.html";
-    //                 }
+            else if (this.points > 15 && this.points < 25){
+                window.location.href="secondWin.html";
+                    }
     
-    //         else if (this.points > 45 && this.points < 55){
-    //             window.location.href="sample.html";
-    //                 }
+            else if (this.points > 6 && this.points < 15){
+                window.location.href="firstWin.html";
+                    }
+            
+            else if (this.points > 0 && this.points < 6){
+                window.location.href="tryAgain.html";
+            }
         
-    // }
+    }
         
     },
 
@@ -190,28 +192,23 @@ const gameState = {
 
 
     checkpoint(ptk){
-        if (ptk == 5){
-            one.style.backgroundColor=red;
+        if (ptk == 15){
+            one.style.color=activeStar;
             
         }
-        else if(ptk == 15){
-            two.style.backgroundColor=red;
-        }
         else if(ptk == 25){
-            three.style.backgroundColor=red;
+            two.style.color=activeStar;
         }
         else if(ptk == 35){
-            four.style.backgroundColor=red;
+            three.style.color=activeStar;
         }
         else if(ptk == 45){
-            five.style.backgroundColor=red;
+            four.style.color=activeStar;
         }
         else if(ptk == 55){
-            six.style.backgroundColor=red;
+            five.style.color=activeStar;
         }
-        else if(ptk == 70){
-            seven.style.backgroundColor=red;
-        }
+        
 
     }
 

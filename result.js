@@ -1,7 +1,6 @@
 
 
-function close(){
+function back(){
 
-    document.querySelector(".cirle").style.visibility("hidden");
-    console.log('true');
+    window.location.href="index.html";
 }
