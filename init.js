@@ -23,8 +23,8 @@ async function init(){
 
 
 init();
-
-// ICONS
+/////////////////////////////////////////////////////////////////////////////////////////////////
+                    // ICONS //
 let firstHeart = document.querySelector(".firstheart");
 let secondHeart = document.querySelector(".secondheart");
 let thirdHeart = document.querySelector(".thirdheart");
@@ -37,7 +37,7 @@ let disableHeart="#e66771";
 let time = document.querySelector(".time");
 let points = document.querySelector(".ptk");
 
-// POINTS
+                    // POINTS //
 let one = document.querySelector(".point_one");
 let two = document.querySelector(".point_two");
 let three = document.querySelector(".point_three");
@@ -45,17 +45,28 @@ let four = document.querySelector(".point_four");
 let five = document.querySelector(".point_five");
 
 
-let activeStar ="rgb(255, 187, 0)";
-let InAtiveStar ="rgb(238, 222, 177)";
-// 
-
 let menu = document.querySelector(".menu");
 let result = document.querySelector(".rules");
 let startGame = false;
 let heartNum = 3;
 
-//COLORS
+                    // COLORS //
 let red = "#957DAD";
+let activeStar ="rgb(255, 187, 0)";
+let InAtiveStar ="rgb(238, 222, 177)";
+
+                    // Winner Point Setting //
+const topWinner = [60];
+const secondPlace = [50, 59];
+const thirdPlace = [39, 40];            // [x, y] -  x: min. points  y:max points 
+const fourthPlace = [29, 30];
+const fivesPlace = [19, 20];
+
+
+/////////////////////////////////////////////////////////////////////////////////
+
+
+
 
 function visableRules(){
     result.style.visibility="visible";
@@ -102,29 +113,29 @@ const gameState = {
 
 
 
-        if(this.clock == 0){
+        if(this.clock == 0 && this.active){
 
-            if (this.points > 45 && this.points < 55){
+            if (this.points > topWinner[0]){
             window.location.href="finalWin.html";
             }
 
-            else if (this.points > 35 && this.points < 45){
+            else if (this.points > secondPlace[0]){
                 window.location.href="fourWin.html";
                 }
 
-            else if (this.points > 25 && this.points < 35){
+            else if (this.points > thirdPlace[0]){
                 window.location.href="thirdWin.html";
                 }
 
-            else if (this.points > 15 && this.points < 25){
+            else if (this.points > fourthPlace[0]){
                 window.location.href="secondWin.html";
                     }
     
-            else if (this.points > 6 && this.points < 15){
+            else if (this.points > fivesPlace[0]){
                 window.location.href="firstWin.html";
                     }
             
-            else if (this.points > 0 && this.points < 6){
+            else{
                 window.location.href="tryAgain.html";
             }
         
@@ -192,20 +203,20 @@ const gameState = {
 
 
     checkpoint(ptk){
-        if (ptk == 15){
+        if (ptk == fivesPlace[0]){
             one.style.color=activeStar;
             
         }
-        else if(ptk == 25){
+        else if(ptk == fourthPlace[0]){
             two.style.color=activeStar;
         }
-        else if(ptk == 35){
+        else if(ptk == thirdPlace[0]){
             three.style.color=activeStar;
         }
-        else if(ptk == 45){
+        else if(ptk == secondPlace[0]){
             four.style.color=activeStar;
         }
-        else if(ptk == 55){
+        else if(ptk == topWinner[0]){
             five.style.color=activeStar;
         }
         
