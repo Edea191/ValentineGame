@@ -93,12 +93,12 @@ body{
 .heart{
     color: red;
     font-size: 1400%;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 .heart:hover{
     font-size: 1000%;
-    transition: 0.2s;
+    transition: 0.1s;
 }
 
 
