@@ -119,19 +119,19 @@ const gameState = {
             window.location.href="finalWin.html";
             }
 
-            else if (this.points > secondPlace[0]){
+            else if (this.points >= secondPlace[0]){
                 window.location.href="fourWin.html";
                 }
 
-            else if (this.points > thirdPlace[0]){
+            else if (this.points >= thirdPlace[0]){
                 window.location.href="thirdWin.html";
                 }
 
-            else if (this.points > fourthPlace[0]){
+            else if (this.points >= fourthPlace[0]){
                 window.location.href="secondWin.html";
                     }
     
-            else if (this.points > fivesPlace[0]){
+            else if (this.points >= fivesPlace[0]){
                 window.location.href="firstWin.html";
                     }
             
