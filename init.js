@@ -63,18 +63,23 @@ if (points == 2){
 const gameState = {
     
     
-    clock: 31,
+    clock: 30,
     points:0,
     win:0,
+    active:false,
 
 
     resetClock(){
-        this.clock = 31;
+        this.clock = 30;
+        time.innerHTML = this.clock;
+        this.active = true;
     },
 
     tick(){
         this.clock--;
-        time.innerHTML = this.clock;
+
+        if (this.active){
+        time.innerHTML = this.clock;}
 
 
 

@@ -4,6 +4,7 @@
     --box-shadow: 5px 5px 10px #a86f95;
     --points-backgroud: #f7bea9;
     --points-shadow: 5px 5px 10px #c48c77;
+    --offlineHeart:#e66771;
 }   
 
 *{
@@ -85,12 +86,12 @@ body{
 .heart{
     color: red;
     font-size: 1400%;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 .heart:hover{
     font-size: 1000%;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 
@@ -121,6 +122,10 @@ body{
 
 }
 
+/* Game Colors */
+.firstheart, .secondheart, .fourheart{
+    color: var(--offlineHeart);
+}
 /* Menu */
 
 .menu{
@@ -180,7 +185,7 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
-    visibility: hidden;
+    visibility: visible;
 
 }
 
@@ -189,6 +194,7 @@ body{
     border: 1px solid #f7bea9;
     margin-bottom: 10%;
     align-self: flex-end;
+    margin-right: 10%;
     
 }
 
