@@ -24,6 +24,16 @@ async function init(){
 
 init();
 
+// ICONS
+let firstHeart = document.querySelector(".firstheart");
+let secondHeart = document.querySelector(".secondheart");
+let thirdHeart = document.querySelector(".thirdheart");
+let fourthHeart = document.querySelector(".fourheart");
+
+let enableHeart="red";
+let disableHeart="#e66771";
+
+
 let time = document.querySelector(".time");
 let points = document.querySelector(".ptk");
 
@@ -40,6 +50,7 @@ let seven = document.querySelector(".seven");
 let menu = document.querySelector(".menu");
 let result = document.querySelector(".rules");
 let startGame = false;
+let heartNum = 3;
 
 //COLORS
 let red = "#957DAD";
@@ -67,6 +78,7 @@ const gameState = {
     points:0,
     win:0,
     active:false,
+    randomNum:3,
 
 
     resetClock(){
@@ -76,6 +88,10 @@ const gameState = {
     },
 
     tick(){
+
+       // this.random();
+       // console.log(this.randomNum);
+        
         this.clock--;
 
         if (this.active){
@@ -88,38 +104,90 @@ const gameState = {
         }
 
 
-        if(this.clock > 10){
+    //     if(this.clock > 10){
 
-            if (this.points > 6 && this.points < 10){
-            window.location.href="sample.html";
-            }
+    //         if (this.points > 6 && this.points < 10){
+    //         window.location.href="sample.html";
+    //         }
 
-            else if (this.points > 11 && this.points < 25){
-                window.location.href="sample.html";
-                }
+    //         else if (this.points > 11 && this.points < 25){
+    //             window.location.href="sample.html";
+    //             }
 
-            else if (this.points > 25 && this.points < 35){
-                window.location.href="sample.html";
-                }
+    //         else if (this.points > 25 && this.points < 35){
+    //             window.location.href="sample.html";
+    //             }
 
-            else if (this.points > 35 && this.points < 45){
-                window.location.href="sample.html";
-                    }
+    //         else if (this.points > 35 && this.points < 45){
+    //             window.location.href="sample.html";
+    //                 }
     
-            else if (this.points > 45 && this.points < 55){
-                window.location.href="sample.html";
-                    }
+    //         else if (this.points > 45 && this.points < 55){
+    //             window.location.href="sample.html";
+    //                 }
         
-    }
+    // }
         
+    },
+
+    random(heartNum){
+        let lastClickedHeart = heartNum;
+
+        console.log(heartNum + " and " + this.randomNum);
+
+        if (heartNum === this.randomNum){
+            min = Math.ceil(1);
+            max = Math.floor(5);
+            this.addPoint();
+            this.disableAll();
+            
+            result = Math.floor(Math.random()* (max - min)) + min;
+            console.log( "A drawn number: " + result);
+
+            this.randomNum= result;
+
+            switch(result){
+                case 1:
+                    this.disableAll();
+                    firstHeart.style.color=enableHeart;
+                    break;
+    
+                case 2:
+                    this.disableAll();
+                    secondHeart.style.color=enableHeart;
+                    break;
+    
+                case 3:
+                    this.disableAll();
+                    thirdHeart.style.color=enableHeart;
+                    break;
+                    
+                case 4:
+                    this.disableAll();
+                    fourthHeart.style.color=enableHeart;
+                    break; 
+    
+        }
+
+         
+        }
+
     },
 
     addPoint(){
-        this.points++,
-        
+        this.points++,    
         points.innerHTML = this.points;
         this.checkpoint(this.points);
     },
+
+    disableAll(){
+        firstHeart.style.color=disableHeart;
+        secondHeart.style.color=disableHeart;
+        thirdHeart.style.color=disableHeart;
+        fourthHeart.style.color=disableHeart;
+
+    },
+
 
     checkpoint(ptk){
         if (ptk == 5){
@@ -150,9 +218,13 @@ const gameState = {
 
 };
 
-function add(){
-    gameState.addPoint();
-}
+function add(howHeart){
+            gameState.random(howHeart);
+    };
+
+
+
+
 
 function hiddenMenu(){
     menu.style.visibility="hidden";

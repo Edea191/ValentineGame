@@ -185,7 +185,7 @@ body{
     display: flex;
     align-content: center;
     justify-content: center;
-    visibility: visible;
+    visibility: hidden;
 
 }
 
