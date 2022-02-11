@@ -8,7 +8,7 @@
     --offlineHeart:#e66771;
     --activeStar:rgb(255, 187, 0);
     --InAtiveStar:rgb(238, 222, 177);
-    --rulesbackground:#B4CB8F;
+    --rulesbackground:#FD8B7E;
     --menubackground:#8E1025;
 }   
 
@@ -17,9 +17,10 @@
 }
 
 h1{
+    color: rgb(139, 107, 107);
     font-family: 'Love Ya Like A Sister'; 
     font-weight: bold;
-    font-size: 40px;
+    font-size: 50px;
 }
 
 body{
@@ -192,7 +193,7 @@ body{
     width: 80%;
     height: 90%;
     padding: 0;
-    
+    border-radius: 2px;
     background-color: var(--rulesbackground);
     border-radius: 2px;
     font-family: 'Roboto', sans-serif;
@@ -207,16 +208,19 @@ body{
 .rules button{
     background-color: #f7bea9;
     border: 1px solid #f7bea9;
+    box-shadow: var(--points-shadow);
     margin-bottom: 10%;
     align-self: flex-end;
-    
+    border-radius: 2px;
     margin-right: 10%;
     
 }
-
+.rules button:hover{
+    background-color: var(--body-background);
+}
 .rules ol{
     
-    margin-bottom: 10%;
+    margin-bottom: 2%;
 }
 .rules [class*="fa-"]{
     font-size: 100%;
