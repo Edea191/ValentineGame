@@ -108,6 +108,11 @@ animation:spin 7s linear infinite;
 
 }
 
+.tico{
+    align-self: center;
+    width: 169px !important;
+    height: 125px !important;
+}
 
 /* Stars */
 
@@ -130,13 +135,13 @@ animation:spin 7s linear infinite;
 }
 
 .photo{
-    background-image: url(./images/photoZuzolek.jpg) !important;
+    background-image: url(./images/tico.jpg) !important;
     border-radius: 5px;
 
 }
 
 .wineerPhoto{
-    background-image: url(./images/mieszkanie.jpg) !important;
+    background-image: url(./images/chorwacja.jpg) !important;
     border-radius: 5px;
 
 }
